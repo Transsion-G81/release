@@ -37,17 +37,15 @@
 - **Flashing may take a while**, and errors during this step are generally fine.
 - **Flashing from a PC or Bugjaeger?** Use
   [`adb sideload`](how-to-flash-sideload.md) instead.
-- **Firmware requirement:** you must already be on **HiOS 14 (Android 14)**
-  firmware before flashing.
-- **Recommended:** OSS/AOSP recovery (the `vendor_boot-<codename>-<rom>.img`
-  from the release).
+- **Recommended:** OSS/AOSP recovery (the `vendor_boot-<codename>.img` from
+  the release).
 
 ---
 
 # 🔧 How to flash from OSS / AOSP recovery
 
-Our releases ship that recovery inside `vendor_boot-<codename>-<rom>.img`
-(for example `vendor_boot-X6532-lineage.img`).
+Our releases ship that recovery inside `vendor_boot-<codename>.img`
+(for example `vendor_boot-X6532.img`).
 
 ## Steps
 
@@ -74,5 +72,3 @@ Our releases ship that recovery inside `vendor_boot-<codename>-<rom>.img`
 - **Installing GApps?** They need a PC, so use
   [`adb sideload`](how-to-flash-sideload.md) (after the ROM, before format data).
 - **Flashing may take a while**, and errors during this step are generally fine.
-- **Firmware requirement:** you must already be on **HiOS 14 (Android 14)**
-  firmware before flashing.

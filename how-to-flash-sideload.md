@@ -12,7 +12,7 @@ A step-by-step guide to flashing a custom ROM using ADB sideload.
 - ADB & Fastboot on your PC (or the
   [Bugjaeger](https://play.google.com/store/apps/details?id=eu.sisik.hackendebug) app)
 - USB cable
-- The ROM zip and the matching `vendor_boot-<codename>-<rom>.img` from the release
+- The ROM zip and the matching `vendor_boot-<codename>.img` from the release
 
 ---
 
@@ -21,8 +21,7 @@ A step-by-step guide to flashing a custom ROM using ADB sideload.
 After downloading you should have:
 
 - The ROM `.zip` (for example `lineage-23.2-*-X6532.zip`)
-- The recovery, `vendor_boot-<codename>-<rom>.img` (for example
-  `vendor_boot-X6532-lineage.img`)
+- The recovery, `vendor_boot-<codename>.img` (for example `vendor_boot-X6532.img`)
 
 ---
 
@@ -39,7 +38,7 @@ adb reboot bootloader
 ### 2. Flash vendor_boot (this is the recovery)
 
 ```bash
-fastboot flash vendor_boot vendor_boot-<codename>-<rom>.img
+fastboot flash vendor_boot vendor_boot-<codename>.img
 ```
 
 ### 3. Reboot to recovery
@@ -102,13 +101,11 @@ minutes, this is normal.
 | Stuck at 47% | Wait, do not disconnect. This is expected behavior. |
 | Device not detected | Make sure USB debugging is on and the drivers are installed. |
 | Sideload fails | Re-download the ROM zip and check it is not corrupted. |
-| Wrong recovery | Make sure you flashed the `vendor_boot` that matches your codename and ROM. |
+| Wrong recovery | Make sure you flashed the `vendor_boot` that matches your codename. |
 
 ---
 
 ## 📝 Note
 
-- **Firmware requirement:** you must already be on **HiOS 14 (Android 14)**
-  firmware before flashing.
 - **Flashing from a custom recovery instead?** See
   [`how-to-flash-recovery.md`](how-to-flash-recovery.md).
